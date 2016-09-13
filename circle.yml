@@ -1,0 +1,5 @@
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - $TEST_TRIGGER_FOR_DOCKER_HUB
