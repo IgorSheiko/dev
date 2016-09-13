@@ -7,5 +7,9 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to be_success
       expect(response).to have_http_status(200)
     end
+
+    it "fail test" do
+    	fail
+  	end
   end
 end
