@@ -20,3 +20,8 @@ COPY . .
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
+
+ADD ./ /usr/src/app
+
+# Run rake tasks
+RUN RAILS_ENV=production rake db:create db:migrate  
