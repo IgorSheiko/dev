@@ -15,10 +15,9 @@ RUN bundle install
 
 COPY . .
 
+docker-compose build
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
-
-ADD ./ /usr/src/app
-
-# Run rake tasks
-RUN RAILS_ENV=production rake db:create db:migrate  
