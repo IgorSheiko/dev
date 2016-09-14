@@ -13,9 +13,9 @@ COPY Gemfile* ./
 RUN gem install bundler
 RUN bundle install
 
-RUN RAILS_ENv=production bundle exec rake db:create
-RUN RAILS_ENv=production bundle exec rake db:migrate
-RUN RAILS_ENv=production bundle exec rake db:seed
+RUN RAILS_ENV=production bundle exec rake db:create
+RUN RAILS_ENV=production bundle exec rake db:migrate
+RUN RAILS_ENV=production bundle exec rake db:seed
 COPY . .
 
 EXPOSE 3000
