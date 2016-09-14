@@ -4,7 +4,9 @@ MAINTAINER igor2109a@gmail.com
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         postgresql-client \
+        nodejs \
     && rm -rf /var/lib/apt/lists/*
+
 
 WORKDIR /usr/src/dev
 COPY Gemfile* ./
