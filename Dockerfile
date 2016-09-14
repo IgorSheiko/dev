@@ -12,9 +12,9 @@ WORKDIR /usr/src/dev
 COPY Gemfile* ./
 RUN gem install bundler
 RUN bundle install
-RUN rake db:create
-RUN rake db:migrate
-RUN rake db:seed
+RUN web rake db:create
+RUN web rake db:migrate
+RUN web rake db:seed
 COPY . .
 
 EXPOSE 3000
