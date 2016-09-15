@@ -3,8 +3,3 @@ deployment:
     branch: master
     commands:
       - $TEST_TRIGGER_FOR_DOCKER_HUB
-test:
-  post:
-    - bundle exec rake spinach:
-        environment:
-          RAILS_ENV: test
