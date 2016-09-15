@@ -12,7 +12,6 @@ WORKDIR /usr/src/dev
 COPY Gemfile* ./
 RUN gem install bundler
 RUN bundle install
-RUN bundle exec rake RAILS_ENV=production DATABASE_URL=postgresql://use
 
 COPY . .
 
