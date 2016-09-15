@@ -13,6 +13,9 @@ COPY Gemfile* ./
 RUN gem install bundler
 RUN bundle install
 
+ENV POSTGRES_DB=dev_production
+ENV POSTGRES_USER=igorsheiko
+ENV POSTGRES_PASSWORD=1111
 COPY . .
 
 EXPOSE 3000
