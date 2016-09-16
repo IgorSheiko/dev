@@ -1,0 +1,14 @@
+postgres:
+  image: postgres
+  autorestart: always
+  environment:
+    - POSTGRES_DB=dev_production
+    - POSTGRES_PASSWORD=1111
+    - POSTGRES_USER=igorsheiko
+  ports: 
+    - '5432:5432'
+web:
+  image: igorsheiko/dev
+  autorestart: always
+  links:
+    - postgres
