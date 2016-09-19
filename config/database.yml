@@ -3,8 +3,8 @@ development: &default
   encoding: unicode
   database: dev_development
   pool: 5
-  username: postgres
-  password:
+  username: igorsheiko
+  password: 1111
 test:
   <<: *default
   database: dev_test
