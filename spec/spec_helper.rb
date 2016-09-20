@@ -16,8 +16,8 @@
 # users commonly want.
 #
 require "simplecov"
-require "simplecov-json"
-require "simplecov-rcov"
+# require "simplecov-json"
+# require "simplecov-rcov"
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -36,8 +36,8 @@ RSpec.configure do |config|
   end
   SimpleCov.formatters = [
     SimpleCov::Formatter::HTMLFormatter,
-    SimpleCov::Formatter::JSONFormatter,
-    SimpleCov::Formatter::RcovFormatter
+    # SimpleCov::Formatter::JSONFormatter,
+    # SimpleCov::Formatter::RcovFormatter
   ]
   SimpleCov.start
   # rspec-mocks config goes here. You can use an alternate test double
