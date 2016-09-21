@@ -15,7 +15,10 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
-require "simplecov"
+require 'simplecov'
+require 'simplecov-rcov'
+SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+SimpleCov.start 'rails'
 # require "simplecov-json"
 # require "simplecov-rcov"
 
@@ -34,12 +37,12 @@ RSpec.configure do |config|
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
-  SimpleCov.formatters = [
-    SimpleCov::Formatter::HTMLFormatter,
-    # SimpleCov::Formatter::JSONFormatter,
-    # SimpleCov::Formatter::RcovFormatter
-  ]
-  SimpleCov.start
+  # SimpleCov.formatters = [
+  #   SimpleCov::Formatter::HTMLFormatter,
+  #   SimpleCov::Formatter::JSONFormatter,
+  #   SimpleCov::Formatter::RcovFormatter
+  # ]
+  # SimpleCov.start
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
   config.mock_with :rspec do |mocks|
